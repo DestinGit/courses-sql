@@ -15,4 +15,4 @@ FROM (
 		FROM ventes
 		GROUP BY annee
 		ORDER BY annee DESC
-) AS t
+) AS t 
