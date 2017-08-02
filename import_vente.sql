@@ -1,6 +1,5 @@
-
 # Importation des données dans la table temporaire des importations
-LOAD DATA INFILE 'c:/temp/ventes.csv'
+LOAD DATA INFILE 'c:/Destin/ventes.csv'
 INTO TABLE import_vente
 FIELDS
 	TERMINATED BY ';'
