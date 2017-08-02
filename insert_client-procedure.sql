@@ -9,8 +9,12 @@ CREATE PROCEDURE `insertion_client` (
     OUT param_idClient INT
 )
 BEGIN
-
 	DECLARE v_idClient INT;
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION
+		BEGIN
+			SELECT false as success, @erreur as message;
+		END;
+    	
     -- Récupération de l'identifiant du client que je veux insérer
     SELECT id_client FROM clients WHERE nom = param_nom AND prenom = param_prenom
     INTO v_idClient;
